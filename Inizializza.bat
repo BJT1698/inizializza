@@ -32,8 +32,8 @@ mkdir temp
 cd temp
 echo Inizializzazione in corso...
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/microsoft/winget-cli/releases/download/v1.0.11692/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle', 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle')
-powershell -Command "Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.3.2691/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
-powershell Add-AppPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+powershell -Command "Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.3.2691/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile winget.msixbundle"
+.\winget.msixbundle
 cls
 echo 1) Si
 echo 2) No

@@ -102,6 +102,22 @@ GOTO End
 
 :End
 
+cls
+echo 1) Si
+echo 2) No
+choice /C 12 /M "Vuoi installare Teleinside (Supremo)?"
+IF ERRORLEVEL 2 GOTO No
+IF ERRORLEVEL 1 GOTO Si
+
+:Si
+curl -L https://assistenza.inside.srl/download/Supremo.exe > supremo.exe
+move supremo.exe "%USERPROFILE%\Desktop\TELEINSIDE.exe"
+cls
+GOTO End
+:No
+GOTO End
+
+:End
 
 echo=Premi un tasto qualsiasi per chiudere.
 pause >nul
